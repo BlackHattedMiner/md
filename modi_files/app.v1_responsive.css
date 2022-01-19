@@ -1,0 +1,570 @@
+﻿@media only screen and (min-width: 1600px) {
+    body {
+        font-size: 17px;
+    }
+
+    .aside-md {
+        width: 300px;
+    }
+
+    .nav-xs {
+        width: 100px;
+    }
+
+    .navbar-brand {
+        font-size: 16.5px !important;
+    }
+
+    .nav-primary li > a > i {
+        width: 60px;
+        font-size: 20px;
+        line-height: 46px;
+        margin: -15px -15px;
+        margin-right: 10px;
+    }
+
+    .nav-primary ul.nav > li li a {
+        font-size: 15px;
+    }
+
+    .nav-primary ul.nav > li > a {
+        font-size: 17px;
+    }
+
+    .nav-xs .nav-primary > ul > li > a {
+        height: 65px;
+        font-size: 15px;
+    }
+
+    .nav-primary ul.nav > li > a {
+        padding: 14px 15px;
+    }
+
+    .nav-xs .nav-primary > ul > li > a {
+        padding: 0;
+    }
+
+
+
+    .nav-primary li > a > i > b {
+        left: -55px;
+    }
+
+    .nav-xs .nav-primary > ul > li > a span {
+        width: 100px;
+        height: 65px;
+    }
+
+    .nav-xs .nav-primary > ul > li > a i {
+        line-height: 65px;
+        font-size: 25px;
+    }
+
+    .nav-xs .nav-primary > ul > li:hover > a i, .nav-xs .nav-primary > ul > li:focus > a i, .nav-xs .nav-primary > ul > li:active > a i, .nav-xs .nav-primary > ul > li.active > a i {
+        margin-top: -65px;
+    }
+
+        .nav-xs .nav-primary > ul > li:hover > a i b, .nav-xs .nav-primary > ul > li:focus > a i b, .nav-xs .nav-primary > ul > li:active > a i b, .nav-xs .nav-primary > ul > li.active > a i b {
+            height: 65px;
+            top: 65px;
+        }
+
+    .nav-xs .nav-primary ul.nav > li li a {
+        font-size: 15px;
+        padding: 11.5px 10px;
+    }
+
+    .nav-xs .nav-primary > ul ul {
+        width: 370px;
+    }
+
+    .nav-xs .multiNav {
+        min-height: 431px;
+    }
+
+    .nav-xs .multiNav1 {
+        margin-left: 368px;
+        min-height: 431px;
+    }
+
+    .nav-xs .multiNav2 {
+        margin-left: 736px;
+        min-height: 431px;
+    }
+
+    .nav-xs .multiNav3 {
+        margin-left: 1104px;
+        min-height: 431px;
+    }
+
+    .form-control, .txtLeftStudent {
+        font-size: 18px;
+        height: 38px;
+    }
+
+    .breadcrumb-ul {
+        font-size: 16px;
+    }
+
+    .panel-heading .nav, .btn {
+        font-size: 17px;
+    }
+
+    .input-group-addon {
+        font-size: 17px;
+    }
+
+    .divlogo {
+        margin-top: 13px;
+    }
+
+        .divlogo ul li span {
+            font-size: 16px !important;
+        }
+
+    .dropdown-menu > li a {
+        font-size: 17px !important;
+    }
+
+    h5, .h5 {
+        font-size: 18px;
+    }
+
+    h4, .h4 {
+        font-size: 22px;
+    }
+
+    .switch span {
+        width: 70px;
+        height: 35px;
+    }
+
+        .switch span:after {
+            width: 35px;
+        }
+
+    .wizard-steps {
+        font-size: 18px;
+    }
+
+    .badge {
+        font-size: 16px;
+    }
+
+    .btnRightLinks {
+        font-size: 14px !important;
+        min-height: 50px;
+    }
+
+    .input-sm, .form-horizontal .form-group-sm .form-control, .form-horizontal .form-group-sm .txtLeftStudent {
+        font-size: 16px;
+        height: 34px;
+    }
+
+    .input-lg, .form-horizontal .form-group-sm .form-control, .form-horizontal .form-group-sm .txtLeftStudent {
+        font-size: 19px;
+        height: 44px;
+    }
+
+    select.input-sm {
+        font-size: 18px;
+        height: 34px;
+    }
+    select.input-lg {
+        font-size: 16px;
+        height: 44px;
+    }
+
+    .btn-sm, .btn-group-sm > .btn {
+        font-size: 16px;
+        /*height: 34px;*/
+    }
+
+    .Width90px {
+        width: 90px !important;
+    }
+
+    .Width100px {
+        width: 100px !important;
+    }
+
+    .MaxWidth100Perc {
+        width: 100% !important;
+    }
+
+    .Height100px {
+        height: 100px !important;
+    }
+
+    .Font20 {
+        font-size: 20px !important;
+    }
+
+    .Font19 {
+        font-size: 19px !important;
+    }
+
+    .HindiFontSize {
+        font-size: 23px !important;
+    }
+
+    .Font1024_11, .Font1024_10 {
+        font-size: 15px;
+    }
+
+    .Font1024_12 {
+        font-size: 16px;
+    }
+
+    .text-sm {
+        font-size: 16px;
+    }
+
+    .highcharts-container text {
+        font-size: 125% !important;
+    }
+
+    .highcharts-container .highcharts-title {
+        font-size: 150% !important;
+    }
+
+    .highcharts-container .highcharts-subtitle {
+        font-size: 150% !important;
+    }
+
+    .DashBoardPanelHeight1024 {
+        min-height: 425px;
+    }
+
+    .SupportPanelHeight1024 {
+        min-height: 381px;
+    }
+
+    .SwitchFalseMain {
+        height: 274px;
+    }
+
+    .SwitchTrueMain {
+        height: 352px;
+    }
+
+
+    .SwitchFalseDetails {
+        height: 285px;
+    }
+
+    .SwitchTrueDetails {
+        height: 357px;
+    }
+
+    .SwitchFalseMainTr {
+        height: 215px;
+    }
+
+    .SwitchTrueMainTr {
+        height: 380px;
+    }
+
+    .SwitchFalseMainPr {
+        height: 299px;
+    }
+
+    .SwitchTrueMainPr {
+        height: 455px;
+    }
+
+    .DashBoardPanelHeight1024Tr {
+        height: 260px;
+    }
+
+    .fa-font-size {
+        font-size: 30px;
+        padding: 5px;
+        float: left;
+        margin-right: 15px;
+    }
+
+    input[type="radio"], input[type="checkbox"] {
+        margin: 6px 0 0;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1599px) {
+    .DashBoardPanelHeight1024 {
+        min-height: 380px;
+    }
+
+    .SupportPanelHeight1024 {
+        min-height: 346px;
+    }
+
+    .SwitchFalseMain {
+        height: 245px;
+    }
+
+    .SwitchTrueMain {
+        height: 312px;
+    }
+
+
+    .SwitchFalseDetails {
+        height: 258px;
+    }
+
+    .SwitchTrueDetails {
+        height: 321px;
+    }
+
+    .SwitchFalseMainTr {
+        height: 195px;
+    }
+
+    .SwitchTrueMainTr {
+        height: 340px;
+    }
+
+    .SwitchFalseMainPr {
+        height: 272px;
+    }
+
+    .SwitchTrueMainPr {
+        height: 412px;
+    }
+
+    .DashBoardPanelHeight1024Tr {
+        height: 235px;
+    }
+
+    .fa-font-size {
+        font-size: 30px;
+        padding: 5px;
+        float: left;
+        margin-right: 10px;
+    }
+}
+
+
+@media only screen and (min-width: 800px) and (max-width: 1024px) {
+    .btn-group a {
+        font-size: 12px;
+    }
+
+    .btn1024Width {
+        min-width: 85px;
+    }
+
+    .btn1024Width100px {
+        min-width: 100px;
+    }
+
+    .Font1024_10 {
+        font-size: 10px;
+    }
+
+    .Font1024_11 {
+        font-size: 11px;
+    }
+
+    .Font1024_11_5 {
+        font-size: 11.5px;
+    }
+
+    .Font1024_12 {
+        font-size: 12px;
+    }
+
+
+    .Pad1024_2 {
+        padding: 2px;
+    }
+
+    .DashBoardPanelHeight1024 {
+        min-height: 380px;
+    }
+
+    .SupportPanelHeight1024 {
+        min-height: 341px;
+    }
+
+    .SwitchFalseMain {
+        height: 245px;
+    }
+
+    .SwitchTrueMain {
+        height: 312px;
+    }
+
+    .SwitchFalseDetails {
+        height: 258px;
+    }
+
+    .SwitchTrueDetails {
+        height: 321px;
+    }
+
+    .SwitchFalseMainTr {
+        height: 195px;
+    }
+
+    .SwitchTrueMainTr {
+        height: 340px;
+    }
+
+    .SwitchFalseMainPr {
+        height: 270px;
+    }
+
+    .SwitchTrueMainPr {
+        height: 410px;
+    }
+
+    .DashBoardPanelHeight1024Tr {
+        height: 235px;
+    }
+
+    .fa-font-size {
+        font-size: 25px;
+        padding: 5px;
+        float: left;
+        margin-right: 5px;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .btn1024Width {
+        min-width: 85px;
+    }
+
+    .btn1024Width100px {
+        min-width: 100px;
+    }
+
+    #divStats .fa-stack-2x {
+        font-size: 10px;
+    }
+
+    #divStats .fa-stack {
+        width: auto;
+        height: auto;
+        margin-left: 1px;
+    }
+
+    #divStats .text-uc {
+        font-size: 10px;
+    }
+
+    #divStats .padder-v {
+        text-align: center;
+        padding: 5px 4px 5px 4px;
+        height: 65px;
+    }
+
+    #divStats .h3 {
+        font-size: 13px;
+        margin-top: 15px;
+    }
+
+    .nav-primary ul.nav > li > a {
+        font-size: 16px;
+        padding: 15px 15px;
+    }
+
+    .nav-xs .nav-primary ul.nav > li li a {
+        font-size: 14px;
+        padding: 12.5px 10px;
+    }
+
+    .nav-xs .nav-primary li > a > i {
+        margin: -16px 7px 0 -15px;
+        line-height: 47px;
+        width: 55px;
+        font-size: 18px;
+    }
+
+    .nav-primary li > a > i > b {
+        left: -50px;
+    }
+
+    .fa-font-size {
+        font-size: 25px;
+        padding: 5px;
+        float: left;
+        margin-right: 5px;
+    }
+
+    .modal-dialog {
+        margin-top: 55px !important;
+    }
+
+    .Font1024_10 {
+        font-size: 10px;
+    }
+
+    .Font1024_11 {
+        font-size: 11px;
+    }
+
+    .Font1024_12 {
+        font-size: 12px;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .desk_modal {
+        pointer-events: none;
+    }
+
+    i.desk_modal {
+        display: none;
+    }
+}
+
+
+.modal.left .modal-dialog,
+.modal.right .modal-dialog {
+    position: fixed;
+    margin: auto;
+    /*width: 320px;*/
+    height: 100%;
+    -webkit-transform: translate3d(0%, 0, 0);
+    -ms-transform: translate3d(0%, 0, 0);
+    -o-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
+}
+
+.modal.left .modal-content,
+.modal.right .modal-body {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.modal.right .modal-content {
+    height: 100%;
+}
+
+.modal.left .modal-body,
+.modal.right .modal-body {
+    padding: 15px 15px 80px;
+}
+
+/*Right*/
+.modal.right.fade .modal-dialog {
+    /*right: -320px;*/
+    -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+    transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+/* ----- MODAL STYLE ----- */
+.modal-content {
+    border-radius: 0;
+    border: none;
+}
+
+.modal-header {
+    border-bottom-color: #EEEEEE;
+    background-color: #FAFAFA;
+}
