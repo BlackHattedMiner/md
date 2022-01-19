@@ -1,0 +1,186 @@
+﻿
+@font-face {
+    font-family: 'Hindi';
+    src: url('Fonts/GurbaniHindi.ttf') format('truetype');
+}
+
+#divKeyboard ul.RowKeys1, ul.RowKeys2, ul.RowKeys3, ul.RowKeys4, ul.RowKeys5 {
+    PADDING: 0;
+    list-style: none;
+    margin: 0;
+    text-align: center;
+}
+
+#divKeyboard ul.title {
+    background: rgba(0, 0, 0, 0.65);
+    padding: 1% 1%;
+    color: white;
+    margin: 0;
+    font-family: raleway;
+    font-weight: bold;
+    cursor: move;
+    user-select: none;
+    letter-spacing: 0.5px;
+}
+
+    #divKeyboard ul.title img {
+        height: 20px;
+        float: left;
+        width: 25px;
+        margin-right: 10px;
+        margin-left: 8px;
+    }
+
+#divKeyboard ul.RowKeys2 {
+}
+
+#divKeyboard ul.RowKeys4 {
+    margin-bottom: 0.5%;
+}
+
+#divKeyboard ul.RowKeys5 {
+    margin-bottom: 1%;
+}
+
+div#divKeyboard {
+    width: 56%;
+    box-shadow: 0px 1px 19px 4px #A7ABAF;
+    border-radius: 5px;
+    min-height: 200px;
+    border: 3px solid #BBB9B9;
+    position: fixed;
+    top: 26%;
+    left: 24%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10000;
+}
+
+
+    div#divKeyboard ul li:hover {
+        box-shadow: none !important;
+    }
+
+#divKeyboard ul.RowKeys1 li, #divKeyboard ul.RowKeys2 li, #divKeyboard ul.RowKeys3 li, #divKeyboard ul.RowKeys4 li {
+    display: inline-block;
+    width: 5.5%;
+    font-size: 16px;
+    text-align: center;
+    margin: 3px 0px 1px 3px;
+    min-height: 33px;
+    box-shadow: 1px 2px 5px 0px #444343;
+    vertical-align: top;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: default;
+}
+
+#divKeyboard ul.RowKeys1 {
+    padding-top: 1% !important;
+}
+
+#divKeyboard div#ShiftKey div {
+    font-family: dosis;
+    letter-spacing: 2px;
+}
+
+#divKeyboard li.button_example {
+    border: 1px solid #7D7D7D;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-size: 18px;
+    width: 80%;
+    padding: 3px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    color: #38393A;
+    font-family: dosis;
+    background-color: #D6DAD6;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#D6DAD6), to(#DEDEDE));
+    background-image: -webkit-linear-gradient(top, #D6DAD6, #DEDEDE);
+    background-image: -moz-linear-gradient(top, #D6DAD6, #DEDEDE);
+    background-image: -ms-linear-gradient(top, #D6DAD6, #DEDEDE);
+    background-image: -o-linear-gradient(top, #D6DAD6, #DEDEDE);
+    background-image: linear-gradient(to bottom, #D6DAD6, #DEDEDE);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#D6DAD6, endColorstr=#B3B3B3);
+}
+
+#divKeyboard .button_example > div {
+    height: 33px;
+}
+
+#divKeyboard .button_example:hover {
+    border: 1px solid #a0aaa0;
+    background-color: #CBCBCB;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#CBCBCB), to(#989898));
+    background-image: -webkit-linear-gradient(top, #CBCBCB, #989898);
+    background-image: -moz-linear-gradient(top, #CBCBCB, #989898);
+    background-image: -ms-linear-gradient(top, #CBCBCB, #989898);
+    background-image: -o-linear-gradient(top, #CBCBCB, #989898);
+    background-image: linear-gradient(to bottom, #CBCBCB, #989898);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#CBCBCB, endColorstr=#989898);
+}
+
+#divKeyboard .pressed {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-size: 18px;
+    width: 80%;
+    font-family: helvetica, sans-serif;
+    padding: 3px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    color: #0D1A38;
+    border: 1px solid #6B6B6B;
+    background-color: #CBCBCB;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#CBCBCB), to(#333333));
+    background-image: -webkit-linear-gradient(top, #CBCBCB, #333333);
+    background-image: -moz-linear-gradient(top, #CBCBCB, #333333);
+    background-image: -ms-linear-gradient(top, #CBCBCB, #333333);
+    background-image: -o-linear-gradient(top, #CBCBCB, #333333);
+    background-image: linear-gradient(to bottom, #CBCBCB, #333333);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#CBCBCB, endColorstr=#333333);
+}
+
+
+#divKeyboard #messageBox {
+    font-family: Hindi;
+    font-size: 18px;
+}
+
+#divKeyboard span.modal-close {
+    position: absolute;
+    top: 9px;
+    right: 13px;
+    width: 55px;
+    height: 35px;
+    cursor: pointer;
+    background: url(../images/close-buttons-sprite.png) no-repeat;
+}
+
+
+@media screen and (max-width:1009px) {
+    div#divKeyboard {
+        width: 98%;
+        left: 1%;
+        top:10%;
+    }
+
+    #divKeyboard ul.RowKeys1 li, #divKeyboard ul.RowKeys2 li, #divKeyboard ul.RowKeys3 li, #divKeyboard ul.RowKeys4 li {
+        width: 6.5%;
+    }
+
+    .divCharbelow {
+        margin-left:0px!important;
+            margin-top: 5px !important;
+    }
+    .shift {
+    display:block !important;
+    }
+    #divKeyboard .button_example > div {
+    height:25px;
+    }
+}

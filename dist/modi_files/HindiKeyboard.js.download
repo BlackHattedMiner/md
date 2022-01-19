@@ -1,0 +1,181 @@
+﻿
+
+function virtualKeys(txtEditor, HindiFontName, shiftKey) {
+    var strHTML = "";
+    var css = "button_example";
+
+    var left = "";
+    var top = "";
+    var divKeyboard = document.getElementById("divKeyboard");
+    if (divKeyboard) {
+        left = divKeyboard.style.left;
+        top = divKeyboard.style.top;
+    }
+
+    if (shiftKey == 1) {
+        if (divKeyboard.className == "shift") {
+            shiftKey = 0;
+            strHTML = "<div id='divKeyboard' ";
+        }
+        else {
+            strHTML = "<div id='divKeyboard' class='shift' ";
+            css = "pressed";
+        }
+    }
+    else {
+        strHTML = "<div id='divKeyboard' ";
+    }
+
+    if (left != "") {
+        strHTML = strHTML + " style='left:" + left + ";top:" + top + ";'>";
+    }
+    else {
+        strHTML = strHTML + ">";
+    }
+
+    $('#divKeyboard').remove();
+
+
+    var strChar = '';
+    var dot = '"';
+    var char = [];
+
+    if (css == "button_example") {
+        char = ["`","1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "\\", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "[", "]", "a", "s", "d", "f", "g", "h", "j", "k", "l", ";", "'", "z", "x", "c", "v", "b", "n", "m", ",", ".", "/"];
+    }
+    else {
+        char = ["~","!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "|", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "{", "}", "A", "S", "D", "F", "G", "H", "J", "K", "L", ":", dot, "Z", "X", "C", "V", "B", "N", "M", "<", ">", "?"];
+    }
+
+    strHTML = strHTML + "<ul class='title'><img src='../images/Hindikeyboard.png' alt='hindiKeyboard' />  Hindi Key Board<span class='modal-close'><span></ul><ul class='RowKeys1'>";
+    var tr = 1;
+    for (var i = 0; i < char.length ; i++) {
+        if ((char[i]) == "z" || (char[i]) == "Z") { strHTML = strHTML + "<li  class='" + css + "' style='width:14%;' > <div href='#' id='ShiftKey' onclick=" + dot + "return virtualKeys('" + txtEditor + "','" + HindiFontName + "',1);" + dot + " style='line-height:30px;'><div> ^Shift</div></div> </li>" }
+
+        strChar = char[i];
+        strHTML = strHTML + "<li  class='button_example'> <div class='KeyBoardKey' id=" + dot + "keys" + i + dot + "  ><div class='divChar' style='float:left;position:absolute;color:gray;font-size:12px;'>" + strChar + "</div><div class='divCharbelow' style='font-family:" + HindiFontName + ";width:12px; margin-left:13px;position:absolute;margin-top:5px;font-size:20px;'>" + strChar + "</div></div> </li>";
+
+        if (char[i] == "\\" || char[i] == "]" || char[i] == "'" || char[i] == "|" || char[i] == "}" || char[i] == dot) {
+            if (tr == 3) {
+                strHTML = strHTML + "<li class='button_example' style='width:15%;'> <div href='#' class='KeyBoardKey' id='enterKey' style='line-height:30px;'><div class='divChar'>Enter</div></li>";
+            }
+            tr = tr + 1;
+            strHTML = strHTML + "</ul><ul class='RowKeys" + tr + "'>";
+
+        }
+
+    }
+    strHTML = strHTML + "</ul>"
+    strHTML = strHTML + "<ul class='RowKeys5'><li class='button_example'> <div href='#' class='KeyBoardKey' id='spaceKey' style='line-height:30px;'><div class='divChar'>Space</div></li>";
+    strHTML = strHTML + "<li class='button_example' style='width:10%;'> <div href='#' class='KeyBoardKey' id='backspaceKey' style='line-height:30px;'><div class='divChar'><i style='margin-top: 7px;' class='fa fa-arrow-left'></i></div></li>";
+    strHTML = strHTML + "</ul>";
+    strHTML = strHTML + "</div>";
+
+    $("body").append(strHTML);
+
+
+    $('span.modal-close').click(function () {
+        $('#divKeyboard ').fadeOut('fast');
+
+    });
+
+
+
+    var windows = document.querySelectorAll('#divKeyboard');
+    jQuery.each(windows, function (index, win) {
+        $("#divKeyboard ul.title").bind("mousedown", function (evt) {
+            // Record where the window started
+            //var real = window.getComputedStyle(win),                       
+
+            winX = parseFloat(getStyle(win, "left")),
+              winY = parseFloat(getStyle(win, "top"));
+            var mX = evt.clientX,
+           mY = evt.clientY;
+            $("body").bind("mousemove", drag);
+            $("body").bind("mouseup", function () {
+                $("body").unbind("mousemove", drag);
+
+            });
+            function drag(evt) {
+                win.style.left = winX + evt.clientX - mX + 'px';
+                win.style.top = winY + evt.clientY - mY + 'px';
+            };
+        });
+    });
+
+    $('.KeyBoardKey').click(function () {
+        var key = $("#" + $(this).attr("id") + " div.divChar").text();
+        if (key == "Space") {
+            key = ' ';
+        }
+        else if (key == "Enter") {
+            key = '\n';
+        }
+        if (key == "") {
+            var element = document.getElementById(txtEditor);
+            element.value = element.value.substring(0, element.value.length - 1);
+        }
+        else {
+            insertAtCaret(txtEditor, key);
+        }
+        hideKeyboard(document.getElementById(txtEditor));
+    });
+
+    //$("#" + txtEditor).focus(function () {
+    //    var div = document.getElementById("divKeyboard");
+    //    if (div.style.display != "none") {
+    //        hideKeyboard(document.getElementById(txtEditor));
+    //    }
+    //});
+    return false;
+
+}
+
+function hideKeyboard(element) {
+    //element.attr('readonly', 'readonly'); // Force keyboard to hide on input field.
+    //element.attr('disabled', 'true'); // Force keyboard to hide on textarea field.
+    element.readOnly = true;
+    element.disabled = true;
+
+    setTimeout(function () {
+        element.blur();  //actually close the keyboard
+        // Remove readonly attribute after keyboard is hidden.
+        element.removeAttribute('readonly');
+        element.removeAttribute('disabled');
+    }, 100);
+}
+
+function insertAtCaret(areaId, text) {
+    var txtarea = document.getElementById(areaId);
+    var scrollPos = txtarea.scrollTop;
+    var strPos = 0;
+    var br = ((txtarea.selectionStart || txtarea.selectionStart == '0') ?
+        "ff" : (document.selection ? "ie" : false));
+    if (br == "ie") {
+        txtarea.focus();
+        var range = document.selection.createRange();
+        range.moveStart('character', -txtarea.value.length);
+        strPos = range.text.length;
+    }
+    else if (br == "ff") strPos = txtarea.selectionStart;
+
+    var front = (txtarea.value).substring(0, strPos);
+    var back = (txtarea.value).substring(strPos, txtarea.value.length);
+    txtarea.value = front + text + back;
+    strPos = strPos + text.length;
+    if (br == "ie") {
+        txtarea.focus();
+        var range = document.selection.createRange();
+        range.moveStart('character', -txtarea.value.length);
+        range.moveStart('character', strPos);
+        range.moveEnd('character', 0);
+        range.select();
+    }
+    else if (br == "ff") {
+        txtarea.selectionStart = strPos;
+        txtarea.selectionEnd = strPos;
+        txtarea.focus();
+    }
+    txtarea.scrollTop = scrollPos;
+}
+
